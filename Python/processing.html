@@ -1,0 +1,2666 @@
+
+<!DOCTYPE HTML>
+<html lang="cn" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>进(线)程处理 · Wiki | janes</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="janes">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-navigator/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="迭代器和生成器.html" />
+    
+    
+    <link rel="prev" href="iterators.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Wiki
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="virtualenv.html">
+            
+                <a href="virtualenv.html">
+            
+                    
+                    Virtualenv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="buildin_type.html">
+            
+                <a href="buildin_type.html">
+            
+                    
+                    常用内置对象操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="模拟http-post-upload-file.html">
+            
+                <a href="模拟http-post-upload-file.html">
+            
+                    
+                    模拟HTTP POST upload file
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="django.html">
+            
+                <a href="django.html">
+            
+                    
+                    Django 1.8.7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="celery.html">
+            
+                <a href="celery.html">
+            
+                    
+                    Celery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="supervisor.html">
+            
+                <a href="supervisor.html">
+            
+                    
+                    Supervisor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="flask.html">
+            
+                <a href="flask.html">
+            
+                    
+                    Flask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="flask_github_api_login.html">
+            
+                <a href="flask_github_api_login.html">
+            
+                    
+                    Flask github api login
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="sqlalchemy.html">
+            
+                <a href="sqlalchemy.html">
+            
+                    
+                    SQLAlchemy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="函数.html">
+            
+                <a href="函数.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="http_server.html">
+            
+                <a href="http_server.html">
+            
+                    
+                    Http Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="iterators.html">
+            
+                <a href="iterators.html">
+            
+                    
+                    Iterators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.14" data-path="processing.html">
+            
+                <a href="processing.html">
+            
+                    
+                    进(线)程处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="迭代器和生成器.html">
+            
+                <a href="迭代器和生成器.html">
+            
+                    
+                    迭代器和生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="metaclass.html">
+            
+                <a href="metaclass.html">
+            
+                    
+                    元类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="add.html">
+            
+                <a href="add.html">
+            
+                    
+                    i+=x 区别 i=i+x
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="log.html">
+            
+                <a href="log.html">
+            
+                    
+                    Log
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="pickle.html">
+            
+                <a href="pickle.html">
+            
+                    
+                    Pickle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="pythonic.html">
+            
+                <a href="pythonic.html">
+            
+                    
+                    Pythonic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="random.html">
+            
+                <a href="random.html">
+            
+                    
+                    Random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="patool.html">
+            
+                <a href="patool.html">
+            
+                    
+                    patool解压
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="scapy.html">
+            
+                <a href="scapy.html">
+            
+                    
+                    Scapy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="phantomjs.html">
+            
+                <a href="phantomjs.html">
+            
+                    
+                    Phantomjs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="selenium.html">
+            
+                <a href="selenium.html">
+            
+                    
+                    Selenium and Xvfb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="../pypi.mds">
+            
+                <span>
+            
+                    
+                    Pypi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="elasticsearch.html">
+            
+                <a href="elasticsearch.html">
+            
+                    
+                    Elasticsearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="network_package.html">
+            
+                <a href="network_package.html">
+            
+                    
+                    network package
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.30" data-path="note.html">
+            
+                <a href="note.html">
+            
+                    
+                    note
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.31" data-path="eval.html">
+            
+                <a href="eval.html">
+            
+                    
+                    动态执行字符串代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.32" data-path="command.html">
+            
+                <a href="command.html">
+            
+                    
+                    命令执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.33" data-path="常用模块.html">
+            
+                <a href="常用模块.html">
+            
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.34" data-path="wechat.html">
+            
+                <a href="wechat.html">
+            
+                    
+                    微信公众号开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.35" data-path="自省.html">
+            
+                <a href="自省.html">
+            
+                    
+                    自省
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.36" data-path="运维.html">
+            
+                <a href="运维.html">
+            
+                    
+                    运维
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.37" data-path="excel.html">
+            
+                <a href="excel.html">
+            
+                    
+                    Excel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.38" data-path="anaconda.html">
+            
+                <a href="anaconda.html">
+            
+                    
+                    Anaconda
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Hack
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Hack/src_env.html">
+            
+                <a href="../Hack/src_env.html">
+            
+                    
+                    SRC平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Hack/information.html">
+            
+                <a href="../Hack/information.html">
+            
+                    
+                    军火库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Hack/sqlmap.html">
+            
+                <a href="../Hack/sqlmap.html">
+            
+                    
+                    Sqlmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Hack/nmap.html">
+            
+                <a href="../Hack/nmap.html">
+            
+                    
+                    Nmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Hack/burpsuite.html">
+            
+                <a href="../Hack/burpsuite.html">
+            
+                    
+                    BurpSuite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Hack/shell.html">
+            
+                <a href="../Hack/shell.html">
+            
+                    
+                    Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../Hack/weevely3.html">
+            
+                <a href="../Hack/weevely3.html">
+            
+                    
+                    Weevely3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../Hack/mitmf.html">
+            
+                <a href="../Hack/mitmf.html">
+            
+                    
+                    中间人攻击MITMf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../Hack/linux提权.html">
+            
+                <a href="../Hack/linux提权.html">
+            
+                    
+                    linux提权
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    WebSecurity
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../WebSecurity/tools.html">
+            
+                <a href="../WebSecurity/tools.html">
+            
+                    
+                    常用工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../WebSecurity/attacktool.html">
+            
+                <a href="../WebSecurity/attacktool.html">
+            
+                    
+                    AttackTool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../WebSecurity/csrf.html">
+            
+                <a href="../WebSecurity/csrf.html">
+            
+                    
+                    CSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../WebSecurity/dns.html">
+            
+                <a href="../WebSecurity/dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../WebSecurity/sqlinject.html">
+            
+                <a href="../WebSecurity/sqlinject.html">
+            
+                    
+                    SqlInject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../WebSecurity/mysql.html">
+            
+                <a href="../WebSecurity/mysql.html">
+            
+                    
+                    Mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../WebSecurity/mysqlinject.html">
+            
+                <a href="../WebSecurity/mysqlinject.html">
+            
+                    
+                    Mysql 注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../WebSecurity/mysql宽字节注入.html">
+            
+                <a href="../WebSecurity/mysql宽字节注入.html">
+            
+                    
+                    Mysql宽字节注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../WebSecurity/mysql注入过滤.html">
+            
+                <a href="../WebSecurity/mysql注入过滤.html">
+            
+                    
+                    Mysql注入过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../WebSecurity/note.html">
+            
+                <a href="../WebSecurity/note.html">
+            
+                    
+                    Note
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../WebSecurity/file.html">
+            
+                <a href="../WebSecurity/file.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../WebSecurity/php_view.html">
+            
+                <a href="../WebSecurity/php_view.html">
+            
+                    
+                    PHP 代码审计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../WebSecurity/php_cmdinject.html">
+            
+                <a href="../WebSecurity/php_cmdinject.html">
+            
+                    
+                    PHP代码执行与命令注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../WebSecurity/php序列化.html">
+            
+                <a href="../WebSecurity/php序列化.html">
+            
+                    
+                    PHP序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../WebSecurity/php-文件包含.html">
+            
+                <a href="../WebSecurity/php-文件包含.html">
+            
+                    
+                    php 文件包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../WebSecurity/php-match-or-comapre.html">
+            
+                <a href="../WebSecurity/php-match-or-comapre.html">
+            
+                    
+                    php match or comapre
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../WebSecurity/ssti-jinja2.html">
+            
+                <a href="../WebSecurity/ssti-jinja2.html">
+            
+                    
+                    SSTI Jinja2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../WebSecurity/scan_for_info.html">
+            
+                <a href="../WebSecurity/scan_for_info.html">
+            
+                    
+                    Scan For Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../WebSecurity/vulnapp.html">
+            
+                <a href="../WebSecurity/vulnapp.html">
+            
+                    
+                    Vulnapp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../WebSecurity/xss.html">
+            
+                <a href="../WebSecurity/xss.html">
+            
+                    
+                    XSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../WebSecurity/xss_bypass.html">
+            
+                <a href="../WebSecurity/xss_bypass.html">
+            
+                    
+                    XSS绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../WebSecurity/php.html">
+            
+                <a href="../WebSecurity/php.html">
+            
+                    
+                    php
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../WebSecurity/ssrf.html">
+            
+                <a href="../WebSecurity/ssrf.html">
+            
+                    
+                    ssrf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../WebSecurity/url.html">
+            
+                <a href="../WebSecurity/url.html">
+            
+                    
+                    url
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../WebSecurity/webshell.html">
+            
+                <a href="../WebSecurity/webshell.html">
+            
+                    
+                    webshell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.26" data-path="../WebSecurity/web渗透测试.html">
+            
+                <a href="../WebSecurity/web渗透测试.html">
+            
+                    
+                    web渗透测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="../WebSecurity/常用端口.html">
+            
+                <a href="../WebSecurity/常用端口.html">
+            
+                    
+                    常用端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="../WebSecurity/常见协议.html">
+            
+                <a href="../WebSecurity/常见协议.html">
+            
+                    
+                    常见协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="../WebSecurity/敏感配置文件.html">
+            
+                <a href="../WebSecurity/敏感配置文件.html">
+            
+                    
+                    敏感配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="../WebSecurity/path_collect.html">
+            
+                <a href="../WebSecurity/path_collect.html">
+            
+                    
+                    文件读取漏洞路径收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.31" data-path="../WebSecurity/解析漏洞.html">
+            
+                <a href="../WebSecurity/解析漏洞.html">
+            
+                    
+                    解析漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Linux/vim.html">
+            
+                <a href="../Linux/vim.html">
+            
+                    
+                    VIM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Linux/ssh.html">
+            
+                <a href="../Linux/ssh.html">
+            
+                    
+                    SSH
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Linux/ncat.html">
+            
+                <a href="../Linux/ncat.html">
+            
+                    
+                    Nc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Linux/tcpdump.html">
+            
+                <a href="../Linux/tcpdump.html">
+            
+                    
+                    Tcpdump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Linux/beyondcompare.html">
+            
+                <a href="../Linux/beyondcompare.html">
+            
+                    
+                    Beyond Compare
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Linux/ps.html">
+            
+                <a href="../Linux/ps.html">
+            
+                    
+                    ps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Linux/grep.html">
+            
+                <a href="../Linux/grep.html">
+            
+                    
+                    Grep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Linux/find.html">
+            
+                <a href="../Linux/find.html">
+            
+                    
+                    Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Linux/cmdline.html">
+            
+                <a href="../Linux/cmdline.html">
+            
+                    
+                    Cmdline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Linux/tmux.html">
+            
+                <a href="../Linux/tmux.html">
+            
+                    
+                    Tmux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../Linux/byobu.html">
+            
+                <a href="../Linux/byobu.html">
+            
+                    
+                    Byobu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../Linux/redis.html">
+            
+                <a href="../Linux/redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../Linux/ubuntu.html">
+            
+                <a href="../Linux/ubuntu.html">
+            
+                    
+                    Ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../Linux/centos.html">
+            
+                <a href="../Linux/centos.html">
+            
+                    
+                    Centos7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../Linux/sql.html">
+            
+                <a href="../Linux/sql.html">
+            
+                    
+                    Sql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../Linux/mysql.html">
+            
+                <a href="../Linux/mysql.html">
+            
+                    
+                    mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Kali2
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Kali2/localnetworl.md">
+            
+                <span>
+            
+                    
+                    局域网攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Kali2/beef.html">
+            
+                <a href="../Kali2/beef.html">
+            
+                    
+                    Beef
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Kali2/code_editor.html">
+            
+                <a href="../Kali2/code_editor.html">
+            
+                    
+                    Code editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Kali2/gather-information.html">
+            
+                <a href="../Kali2/gather-information.html">
+            
+                    
+                    Gather Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Kali2/hydra.html">
+            
+                <a href="../Kali2/hydra.html">
+            
+                    
+                    Hydra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Kali2/mitmproxy.html">
+            
+                <a href="../Kali2/mitmproxy.html">
+            
+                    
+                    MitmProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Kali2/pyenv.html">
+            
+                <a href="../Kali2/pyenv.html">
+            
+                    
+                    Pyenv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Kali2/remote.html">
+            
+                <a href="../Kali2/remote.html">
+            
+                    
+                    Remote access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Kali2/w3af.html">
+            
+                <a href="../Kali2/w3af.html">
+            
+                    
+                    W3af
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Kali2/install&configure.html">
+            
+                <a href="../Kali2/install&configure.html">
+            
+                    
+                    install and configure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../Kali2/phpmyadmin.html">
+            
+                <a href="../Kali2/phpmyadmin.html">
+            
+                    
+                    phpmyadmin install and configure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../Kali2/flow_analysis.html">
+            
+                <a href="../Kali2/flow_analysis.html">
+            
+                    
+                    流量监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Vuln
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Vuln/joomla.html">
+            
+                <a href="../Vuln/joomla.html">
+            
+                    
+                    Joomla
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    PHP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../PHP/phpstorm.html">
+            
+                <a href="../PHP/phpstorm.html">
+            
+                    
+                    PHPSTORM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../PHP/function.html">
+            
+                <a href="../PHP/function.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../PHP/configure.html">
+            
+                <a href="../PHP/configure.html">
+            
+                    
+                    configure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../PHP/note.html">
+            
+                <a href="../PHP/note.html">
+            
+                    
+                    note
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../PHP/正则匹配.html">
+            
+                <a href="../PHP/正则匹配.html">
+            
+                    
+                    正则匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    Docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Docker/clean.html">
+            
+                <a href="../Docker/clean.html">
+            
+                    
+                    镜像和容器清理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Docker/docker-compose.html">
+            
+                <a href="../Docker/docker-compose.html">
+            
+                    
+                    Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Docker/dockerfile.html">
+            
+                <a href="../Docker/dockerfile.html">
+            
+                    
+                    Dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Docker/docker-api-in-python.html">
+            
+                <a href="../Docker/docker-api-in-python.html">
+            
+                    
+                    docker api in python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../Docker/mac.html">
+            
+                <a href="../Docker/mac.html">
+            
+                    
+                    docker for mac
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../Docker/locale.html">
+            
+                <a href="../Docker/locale.html">
+            
+                    
+                    locale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../Docker/note.html">
+            
+                <a href="../Docker/note.html">
+            
+                    
+                    note
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../Docker/openvpn.html">
+            
+                <a href="../Docker/openvpn.html">
+            
+                    
+                    openvpn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../Docker/安装和基本命令.html">
+            
+                <a href="../Docker/安装和基本命令.html">
+            
+                    
+                    安装和基本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../Docker/常用开发环境.html">
+            
+                <a href="../Docker/常用开发环境.html">
+            
+                    
+                    常用开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../Docker/微容器.html">
+            
+                <a href="../Docker/微容器.html">
+            
+                    
+                    微容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../Docker/心得.html">
+            
+                <a href="../Docker/心得.html">
+            
+                    
+                    心得
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="../Docker/持续集成与自动发布.html">
+            
+                <a href="../Docker/持续集成与自动发布.html">
+            
+                    
+                    持续集成与自动发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    HTTP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../HTTP/cookie.html">
+            
+                <a href="../HTTP/cookie.html">
+            
+                    
+                    Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../HTTP/encode_and_decode.html">
+            
+                <a href="../HTTP/encode_and_decode.html">
+            
+                    
+                    Encode and Decode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../HTTP/http请求格式.html">
+            
+                <a href="../HTTP/http请求格式.html">
+            
+                    
+                    HTTP请求格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../HTTP/proxy.html">
+            
+                <a href="../HTTP/proxy.html">
+            
+                    
+                    Proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../HTTP/xpath.html">
+            
+                <a href="../HTTP/xpath.html">
+            
+                    
+                    XPATH
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    Git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Git/git_cmd.html">
+            
+                <a href="../Git/git_cmd.html">
+            
+                    
+                    Git Command
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Git/git_remote_operation.html">
+            
+                <a href="../Git/git_remote_operation.html">
+            
+                    
+                    git remote operation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Git/git.html">
+            
+                <a href="../Git/git.html">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Git/gist.html">
+            
+                <a href="../Git/gist.html">
+            
+                    
+                    Gist
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    MAC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../MAC/brew.html">
+            
+                <a href="../MAC/brew.html">
+            
+                    
+                    Homebrew
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../MAC/iterm2.html">
+            
+                <a href="../MAC/iterm2.html">
+            
+                    
+                    ITerm2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../MAC/note.html">
+            
+                <a href="../MAC/note.html">
+            
+                    
+                    Note
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    Image
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Image/png.html">
+            
+                <a href="../Image/png.html">
+            
+                    
+                    PNG
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    JS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../JS/xhr.html">
+            
+                <a href="../JS/xhr.html">
+            
+                    
+                    XHR
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    Note
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../Note/mail.html">
+            
+                <a href="../Note/mail.html">
+            
+                    
+                    mail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../Note/ctf.html">
+            
+                <a href="../Note/ctf.html">
+            
+                    
+                    CTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../Note/elk.html">
+            
+                <a href="../Note/elk.html">
+            
+                    
+                    ELK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../Note/google-hacking.html">
+            
+                <a href="../Note/google-hacking.html">
+            
+                    
+                    Google Hacking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../Note/same-origin-policy.html">
+            
+                <a href="../Note/same-origin-policy.html">
+            
+                    
+                    same origin policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../Note/software.html">
+            
+                <a href="../Note/software.html">
+            
+                    
+                    software
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../Note/mod.html">
+            
+                <a href="../Note/mod.html">
+            
+                    
+                    幂取模运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../Note/paper.html">
+            
+                <a href="../Note/paper.html">
+            
+                    
+                    论文
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    AWS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../AWS/note.html">
+            
+                <a href="../AWS/note.html">
+            
+                    
+                    note
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    Python3
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../Python3/string.html">
+            
+                <a href="../Python3/string.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" >
+            
+                <span>
+            
+                    
+                    Simiki
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../Simiki/simiki-命令.html">
+            
+                <a href="../Simiki/simiki-命令.html">
+            
+                    
+                    simiki 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../Simiki/start with github page.html">
+            
+                <a href="../Simiki/start with github page.html">
+            
+                    
+                    start github page
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >进(线)程处理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="0x00_&#x4ECB;&#x7ECD;">1. 0x00 &#x4ECB;&#x7ECD;</h2>
+<p><a href="http://blog.rainy.im/2016/04/07/python-thread-and-coroutine/" target="_blank">python &#x7EBF;&#x7A0B;&#x4E0E;&#x534F;&#x7A0B;</a></p>
+<p>&#x5E76;&#x884C;: &#x7B80;&#x5355;&#x6765;&#x8BF4;&#x5E76;&#x884C;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x8FD0;&#x884C;&#x7684;&#x6837;&#x5B50;&#xFF0C;&#x6BCF;&#x4E2A;&#x4EBA;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#x6267;&#x884C;&#x5355;&#x5143;&#xFF0C;&#x5404;&#x81EA;&#x5B8C;&#x6210;&#x81EA;&#x5DF1;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x8FD9;&#x5BF9;&#x5E94;&#x7740;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#xFF08;&#x591A;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#xFF09;&#x6216;&#x591A;&#x6838;&#xFF08;&#x591A;&#x4E2A;CPU&#xFF09;&#x8FD0;&#x4F5C;&#x6A21;&#x5F0F;</p>
+<p>&#x5E76;&#x53D1;: &#x5E76;&#x53D1;&#x5BF9;&#x5E94;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x5145;&#x5206;&#x5229;&#x7528;&#x5355;&#x6838;&#xFF08;&#x4E00;&#x4E2A;CPU&#xFF09;&#x5B9E;&#x73B0;&#xFF08;&#x770B;&#x8D77;&#x6765;&#xFF09;&#x591A;&#x4E2A;&#x4EFB;&#x52A1;&#x540C;&#x65F6;&#x6267;&#x884C;</p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;CPU&#x5BC6;&#x96C6;&#x578B;&#x9009;&#x7528;&#x591A;&#x8FDB;&#x7A0B;&#xFF0C;IO&#x5BC6;&#x96C6;&#x578B;&#x9009;&#x7528;&#x591A;&#x7EBF;&#x7A0B;</p>
+<pre class="language-"><code>0x01 parallel python
+0x02 multiprocessing
+0x03 threading
+</code></pre><h2 id="0x01_parallel">2. 0x01 parallel</h2>
+<blockquote>
+<p>version: py 2,3</p>
+</blockquote>
+<p><a href="http://www.parallelpython.com/" target="_blank">parallel &#x5B98;&#x7F51;</a></p>
+<p><a href="http://www.parallelpython.com/content/view/17/31/" target="_blank">parallel demo</a></p>
+<p>Parallel Python &#x63D0;&#x4F9B;&#x4E86; python &#x5E76;&#x53D1;&#x6267;&#x884C;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x652F;&#x6301; SMP(systems with multiple processors or cores) &#x548C; &#x7F51;&#x7EDC;&#x96C6;&#x7FA4;&#x7CFB;&#x7EDF; (clusters)</p>
+<h3 id="install">2.1. install</h3>
+<ol>
+<li><p><a href="http://www.parallelpython.com/" target="_blank">parallel &#x5B98;&#x7F51;</a> download and install</p>
+</li>
+<li><p><code>pip install pp</code></p>
+</li>
+</ol>
+<h3 id="module">2.2. module</h3>
+<p>Server</p>
+<pre class="language-"><code>__init__(self, ncpus=&apos;autodetect&apos;, ppservers=(), secret=None, restart=False, proto=2, socket_timeout=3600)
+
+submit(self, func, args=(), depfuncs=(), modules=(), callback=None, callbackargs=(), group=&apos;default&apos;, globals=None)
+    Submits function to the execution queue
+
+    func - function to be executed
+    args - tuple with arguments of the &apos;func&apos;
+    depfuncs - tuple with functions which might be called from &apos;func&apos;
+    modules - tuple with module names to import
+    callback - callback function which will be called with argument 
+            list equal to callbackargs+(result,) 
+            as soon as calculation is done
+    callbackargs - additional arguments for callback function
+    group - job group, is used when wait(group) is called to wait for
+    jobs in a given group to finish
+    globals - dictionary from which all modules, functions and classes
+    will be imported, for instance: globals=globals()
+</code></pre><h3 id="guide">2.3. guide</h3>
+<p>SMP</p>
+<pre class="language-"><code>1) Import pp module:
+
+    import pp
+
+2) Start pp execution server with the number of workers set to the number of processors in the system
+
+    job_server = pp.Server() 
+
+3) Submit all the tasks for parallel execution:
+
+    f1 = job_server.submit(func1, args1, depfuncs1, modules1)
+    f2 = job_server.submit(func1, args2, depfuncs1, modules1)
+    f3 = job_server.submit(func2, args3, depfuncs2, modules2) 
+   ...etc...
+
+4) Retrieve the results as needed:
+
+    r1 = f1()
+    r2 = f2()
+    r3 = f3()
+</code></pre><h2 id="0x02_multiprocessing">3. 0x02 multiprocessing</h2>
+<blockquote>
+<p>&#x6807;&#x51C6;&#x5E93;</p>
+</blockquote>
+<p>python &#x591A;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;</p>
+<p><a href="https://docs.python.org/2/library/multiprocessing.html" target="_blank">document</a></p>
+<h3 id="&#x5E38;&#x7528;&#x7C7B;">3.1. &#x5E38;&#x7528;&#x7C7B;</h3>
+<pre class="language-"><code>class multiprocessing.Process(group=None, target=None, name=None, args=(), kwargs={})
+
+class multiprocessing.Pool([processes[, initializer[, initargs[, maxtasksperchild]]]])
+# functions
+apply_async(func[, args[, kwds[, callback]]])   &#x975E;&#x963B;&#x585E;
+apply(func[, args[, kwds]])     &#x963B;&#x585E;
+map_async(func, iterable[, chunksize[, callback]])
+map(func, iterable[, chunksize])    return list
+close()        &#x5173;&#x95ED;pool&#xFF0C;&#x4F7F;&#x5176;&#x4E0D;&#x5728;&#x63A5;&#x53D7;&#x65B0;&#x7684;&#x4EFB;&#x52A1;&#x3002;
+terminate()    &#x7ED3;&#x675F;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#xFF0C;&#x4E0D;&#x5728;&#x5904;&#x7406;&#x672A;&#x5B8C;&#x6210;&#x7684;&#x4EFB;&#x52A1;&#x3002;
+join()         &#x4E3B;&#x8FDB;&#x7A0B;&#x963B;&#x585E;&#xFF0C;&#x7B49;&#x5F85;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x9000;&#x51FA;&#xFF0C; join&#x65B9;&#x6CD5;&#x8981;&#x5728;close&#x6216;terminate&#x4E4B;&#x540E;&#x4F7F;&#x7528;
+
+class multiprocessing.pool.AsyncResult
+    The class of the result returned by Pool.apply_async() and Pool.map_async()
+# functions
+get([timeout])  Return the result when it arrives
+wait([timeout]) Wait until the result is available or until timeout seconds pass.
+ready()         Return whether the call has completed
+successful()    Return whether the call completed without raising an exception
+</code></pre><p><strong> Pool: </strong> &#x542F;&#x52A8;&#x5927;&#x91CF;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x8FDB;&#x7A0B;&#x6C60;&#x7684;&#x65B9;&#x5F0F;&#x6279;&#x91CF;&#x521B;&#x5EFA;&#x5B50;&#x8FDB;&#x7A0B;&#xFF1A;</p>
+<ul>
+<li><p>demo</p>
+</li>
+<li><p>Process</p>
+</li>
+</ul>
+<pre class="language-"><code>```
+
+2. Pool
+</code></pre><p>def worker(arg1):
+    print arg1
+    return arg1</p>
+<p>result = []
+pool = multiprocessing.Pool(4)
+for i in xrange(6):
+    msg = &quot;hello %d&quot; %i
+    result.append(pool.apply_async(worker, (msg,)))</p>
+<p>pool.close()
+pool.join()</p>
+<p>for r in result:
+    print r.get()</p>
+<h1 id="_"> </h1>
+<p>multiple_results = [pool.apply_async(worker, (i,)) for i in range(6)]
+print [res.get(timeout=1) for res in multiple_results]</p>
+<p>#
+print pool.map(worker, range(6)) </p>
+<pre class="language-"><code>
+### ** multiprocessing.dummy **
+
+dummy &#x4F5C;&#x7528;&#x4E8E;&#x7EBF;&#x7A0B;
+</code></pre><p>from multiprocessing.dummy import Pool as ThreadPool</p>
+<pre class="language-"><code>
+### &#x5907;&#x6CE8; 
+
+&#x5728;UNIX&#x5E73;&#x53F0;&#x4E0A;&#xFF0C;&#x5F53;&#x67D0;&#x4E2A;&#x8FDB;&#x7A0B;&#x7EC8;&#x7ED3;&#x4E4B;&#x540E;&#xFF0C;&#x8BE5;&#x8FDB;&#x7A0B;&#x9700;&#x8981;&#x88AB;&#x5176;&#x7236;&#x8FDB;&#x7A0B;&#x8C03;&#x7528;wait&#xFF0C;&#x5426;&#x5219;&#x8FDB;&#x7A0B;&#x6210;&#x4E3A;&#x50F5;&#x5C38;&#x8FDB;&#x7A0B;(Zombie)&#xFF0C; &#x6240;&#x4EE5;&#xFF0C;&#x6709;&#x5FC5;&#x8981;&#x5BF9;&#x6BCF;&#x4E2A;Process&#x5BF9;&#x8C61;&#x8C03;&#x7528;join()&#x65B9;&#x6CD5; (&#x5B9E;&#x9645;&#x4E0A;&#x7B49;&#x540C;&#x4E8E;wait)&#x3002;&#x5BF9;&#x4E8E;&#x591A;&#x7EBF;&#x7A0B;&#x6765;&#x8BF4;&#xFF0C;&#x7531;&#x4E8E;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x5B58;&#x5728;&#x6B64;&#x5FC5;&#x8981;&#x6027;&#x3002;
+
+multiprocessing&#x63D0;&#x4F9B;&#x4E86;threading&#x5305;&#x4E2D;&#x6CA1;&#x6709;&#x7684;IPC(&#x6BD4;&#x5982;Pipe&#x548C;Queue)&#xFF0C;&#x6548;&#x7387;&#x4E0A;&#x66F4;&#x9AD8;&#x3002;&#x5E94;&#x4F18;&#x5148;&#x8003;&#x8651;Pipe&#x548C;Queue&#xFF0C;&#x907F;&#x514D;&#x4F7F;&#x7528;Lock/Event/Semaphore/Condition&#x7B49;&#x540C;&#x6B65;&#x65B9;&#x5F0F; (&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x5360;&#x636E;&#x7684;&#x4E0D;&#x662F;&#x7528;&#x6237;&#x8FDB;&#x7A0B;&#x7684;&#x8D44;&#x6E90;)&#x3002;
+
+&#x591A;&#x8FDB;&#x7A0B;&#x5E94;&#x8BE5;&#x907F;&#x514D;&#x5171;&#x4EAB;&#x8D44;&#x6E90;&#x3002;&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x5730;&#x5171;&#x4EAB;&#x8D44;&#x6E90;&#xFF0C;&#x6BD4;&#x5982;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x6216;&#x8005;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x3002;&#x5728;&#x591A;&#x8FDB;&#x7A0B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7531;&#x4E8E;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x6709;&#x81EA;&#x5DF1;&#x72EC;&#x7ACB;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x4EE5;&#x4E0A;&#x65B9;&#x6CD5;&#x5E76;&#x4E0D;&#x5408;&#x9002;&#x3002;&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x548C;Manager&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x5171;&#x4EAB;&#x8D44;&#x6E90;&#x3002;&#x4F46;&#x8FD9;&#x6837;&#x505A;&#x63D0;&#x9AD8;&#x4E86;&#x7A0B;&#x5E8F;&#x7684;&#x590D;&#x6742;&#x5EA6;&#xFF0C;&#x5E76;&#x56E0;&#x4E3A;&#x540C;&#x6B65;&#x7684;&#x9700;&#x8981;&#x800C;&#x964D;&#x4F4E;&#x4E86;&#x7A0B;&#x5E8F;&#x7684;&#x6548;&#x7387;
+
+## 0x03 threading
+
+&gt; &#x6807;&#x51C6;&#x5E93;
+
+[document][5]
+
+### &#x5E38;&#x7528;&#x7C7B;
+</code></pre><p>class threading.Thread(group=None, target=None, name=None, args=(), kwargs={})
+```</p>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#_"> </a></p><li><a href="#0x00_&#x4ECB;&#x7ECD;">1. 0x00 &#x4ECB;&#x7ECD;</a></li><li><a href="#0x01_parallel">2. 0x01 parallel</a></li><ul><li><a href="#install">2.1. install</a></li><li><a href="#module">2.2. module</a></li><li><a href="#guide">2.3. guide</a></li></ul><li><a href="#0x02_multiprocessing">3. 0x02 multiprocessing</a></li><ul><li><a href="#&#x5E38;&#x7528;&#x7C7B;">3.1. &#x5E38;&#x7528;&#x7C7B;</a></li></ul></ul></div><a href="#0x00_&#x4ECB;&#x7ECD;" id="goTop"><i class="fa fa-arrow-up"></i></a>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="iterators.html" class="navigation navigation-prev " aria-label="Previous page: Iterators">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="迭代器和生成器.html" class="navigation navigation-next " aria-label="Next page: 迭代器和生成器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"进(线)程处理","date":"2016-05-28 11:41","level":"1.2.14","depth":2,"next":{"title":"迭代器和生成器","level":"1.2.15","depth":2,"path":"Python/迭代器和生成器.md","ref":"Python/迭代器和生成器.md","articles":[]},"previous":{"title":"Iterators","level":"1.2.13","depth":2,"path":"Python/iterators.md","ref":"Python/iterators.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","splitter","sitemap","simple-page-toc","navigator"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"https://hxer.github.io"},"navigator":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"janes","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Wiki | janes","language":"cn","gitbook":">= 3.2.0","description":"janes' note"},"file":{"path":"Python/processing.md","mtime":"2016-11-25T07:15:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-18T15:59:36.890Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
