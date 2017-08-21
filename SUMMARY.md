@@ -90,6 +90,7 @@
     * [SSH](Linux/ssh.md)
     * [Nc](Linux/ncat.md)
     * [Tcpdump](Linux/tcpdump.md)
+    * [GDB](Linux/gdb.md)
     * [Beyond Compare](Linux/beyondcompare.md)
     * [ps](Linux/ps.md)
     * [Grep](Linux/grep.md)
@@ -153,6 +154,7 @@
     * [Homebrew](MAC/brew.md)
     * [ITerm2](MAC/iterm2.md)
     * [Note](MAC/note.md)
+    * [MAC搭建PHP调试环境](MAC/MAC搭建PHP调试环境.md)
 * Image
     * [PNG](Image/png.md)
 * JS

