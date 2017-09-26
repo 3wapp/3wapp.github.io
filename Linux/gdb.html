@@ -7,7 +7,7 @@
         <title>GDB · Wiki | janes</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         <meta name="author" content="janes">
         
         
@@ -2478,6 +2478,11 @@
 </thead>
 <tbody>
 <tr>
+<td>start</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>r/run</td>
 <td></td>
 <td>&#x8FD0;&#x884C;&#x6307;&#x5B9A;&#x7684;&#x7A0B;&#x5E8F;</td>
@@ -2543,9 +2548,14 @@
 <td>&#x5217;&#x51FA;&#x6240;&#x6709;&#x5F53;&#x524D;&#x4E0A;&#x4E0B;&#x6587;&#x53D8;&#x91CF;</td>
 </tr>
 <tr>
-<td>Info break</td>
+<td>Info break/b</td>
 <td></td>
 <td>&#x67E5;&#x770B;&#x65AD;&#x70B9;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>info functions <fun_name></fun_name></td>
+<td><code>info functions thread*</code></td>
+<td>&#x67E5;&#x770B;&#x6240;&#x6709;&#x51FD;&#x6570;/&#x7279;&#x5B9A;&#x51FD;&#x6570;(&#x652F;&#x6301;&#x6B63;&#x5219;)</td>
 </tr>
 <tr>
 <td>list <lineno1, lineno2=""></lineno1,></td>
@@ -2557,27 +2567,76 @@
 <td></td>
 <td>&#x67E5;&#x770B;&#x8C03;&#x7528;&#x6808;</td>
 </tr>
+<tr>
+<td>watch</td>
+<td><code>watch *(data type*)address</code></td>
+<td>&#x8BBE;&#x7F6E;&#x76D1;&#x89C6;&#x70B9;</td>
+</tr>
+<tr>
+<td>info watchpoints</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>rw/rwatch</td>
+<td></td>
+<td>&#x8BBE;&#x7F6E;&#x8BFB;&#x89C2;&#x5BDF;&#x70B9;</td>
+</tr>
+<tr>
+<td>whatis</td>
+<td></td>
+<td>&#x67E5;&#x8BE2;&#x53D8;&#x91CF;&#x6216;&#x51FD;&#x6570;</td>
+</tr>
+<tr>
+<td>where</td>
+<td></td>
+</tr>
 </tbody>
 </table>
+<h3 id="&#x6761;&#x4EF6;&#x65AD;&#x70B9;&#x8BBE;&#x7F6E;">1.1. &#x6761;&#x4EF6;&#x65AD;&#x70B9;&#x8BBE;&#x7F6E;</h3>
 <ul>
-<li><p>delete
-&#x7528;&#x6CD5;&#xFF1A;<code>delete [breakpoints num][range&#x2026;]</code>
-delete&#x53EF;&#x5220;&#x9664;&#x5355;&#x4E2A;&#x65AD;&#x70B9;&#xFF0C;&#x4E5F;&#x53EF;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x65AD;&#x70B9;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x8FD9;&#x4E2A;&#x96C6;&#x5408;&#x7528;&#x8FDE;&#x7EED;&#x7684;&#x65AD;&#x70B9;&#x53F7;&#x6765;&#x63CF;&#x8FF0;&#x3002;
-&#x5982;: <code>delete 5</code>, <code>delete 1-10</code></p>
-</li>
-<li><p>clear
-&#x7528;&#x6CD5;: <code>clear</code> , &#x5220;&#x9664;&#x6240;&#x5728;&#x884C;&#x7684;&#x591A;&#x6709;&#x65AD;&#x70B9;&#x3002;
-&#x200B;         <code>clear location</code>, clear &#x5220;&#x9664;&#x6240;&#x9009;&#x5B9A;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x65AD;&#x70B9;
-&#x200B;        <code>clear location location</code>, &#x5177;&#x4F53;&#x7684;&#x65AD;&#x70B9;</p>
-<pre class="language-"><code>clear list_insert         //&#x5220;&#x9664;&#x51FD;&#x6570;&#x7684;&#x6240;&#x6709;&#x65AD;&#x70B9;
-clear list.c:list_delet   //&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF1A;&#x51FD;&#x6570;&#x7684;&#x6240;&#x6709;&#x65AD;&#x70B9;
-clear 12                  //&#x5220;&#x9664;&#x884C;&#x53F7;&#x7684;&#x6240;&#x6709;&#x65AD;&#x70B9;
-clear list.c:12           //&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF1A;&#x884C;&#x53F7;&#x7684;&#x6240;&#x6709;&#x65AD;&#x70B9;
-</code></pre><p>&#x200B;</p>
-<p>&#x200B;</p>
+<li><p><code>break &#x2026; if cond</code></p>
+<p>```
+b 10 if i==101</p>
 </li>
 </ul>
-<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#"></a></p><li><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;">1. &#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li></ul></div><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;" id="goTop"><i class="fa fa-arrow-up"></i></a>
+<pre class="language-"><code>
+  &#x200B;
+
+### &#x5206;&#x5272;&#x7A97;&#x53E3;
+
+| &#x547D;&#x4EE4;           | &#x89E3;&#x91CA;                   |
+| ------------ | -------------------- |
+| layout       | &#x7528;&#x4E8E;&#x5206;&#x5272;&#x7A97;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x4E00;&#x8FB9;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#xFF0C;&#x4E00;&#x8FB9;&#x6D4B;&#x8BD5; |
+| layout src   | &#x663E;&#x793A;&#x6E90;&#x4EE3;&#x7801;&#x7A97;&#x53E3;              |
+| layout asm   | &#x663E;&#x793A;&#x53CD;&#x6C47;&#x7F16;&#x7A97;&#x53E3;              |
+| layout regs  | &#x663E;&#x793A;&#x6E90;&#x4EE3;&#x7801;/&#x53CD;&#x6C47;&#x7F16;&#x548C;CPU&#x5BC4;&#x5B58;&#x5668;&#x7A97;&#x53E3;   |
+| layout split | &#x663E;&#x793A;&#x6E90;&#x4EE3;&#x7801;&#x548C;&#x53CD;&#x6C47;&#x7F16;&#x7A97;&#x53E3;          |
+| Ctrl + L     | &#x5237;&#x65B0;&#x7A97;&#x53E3;                 |
+
+
+
+
+
+- delete
+  &#x7528;&#x6CD5;&#xFF1A;`delete [breakpoints num][range&#x2026;]`
+  delete&#x53EF;&#x5220;&#x9664;&#x5355;&#x4E2A;&#x65AD;&#x70B9;&#xFF0C;&#x4E5F;&#x53EF;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x65AD;&#x70B9;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x8FD9;&#x4E2A;&#x96C6;&#x5408;&#x7528;&#x8FDE;&#x7EED;&#x7684;&#x65AD;&#x70B9;&#x53F7;&#x6765;&#x63CF;&#x8FF0;&#x3002;
+  &#x5982;: `delete 5`, `delete 1-10`
+
+- clear
+  &#x7528;&#x6CD5;: `clear` , &#x5220;&#x9664;&#x6240;&#x5728;&#x884C;&#x7684;&#x591A;&#x6709;&#x65AD;&#x70B9;&#x3002;
+  &#x200B;         `clear location`, clear &#x5220;&#x9664;&#x6240;&#x9009;&#x5B9A;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x65AD;&#x70B9;
+  &#x200B;        `clear location location`, &#x5177;&#x4F53;&#x7684;&#x65AD;&#x70B9;
+</code></pre><p>  clear list_insert         //&#x5220;&#x9664;&#x51FD;&#x6570;&#x7684;&#x6240;&#x6709;&#x65AD;&#x70B9;
+  clear list.c:list_delet   //&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF1A;&#x51FD;&#x6570;&#x7684;&#x6240;&#x6709;&#x65AD;&#x70B9;
+  clear 12                  //&#x5220;&#x9664;&#x884C;&#x53F7;&#x7684;&#x6240;&#x6709;&#x65AD;&#x70B9;
+  clear list.c:12           //&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF1A;&#x884C;&#x53F7;&#x7684;&#x6240;&#x6709;&#x65AD;&#x70B9;
+  ```</p>
+<h3 id="&#x53C2;&#x8003;">1.2. &#x53C2;&#x8003;</h3>
+<ul>
+<li><a href="https://wizardforcel.gitbooks.io/100-gdb-tips/set-step-mode-on.html" target="_blank">https://wizardforcel.gitbooks.io/100-gdb-tips/set-step-mode-on.html</a></li>
+</ul>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#"></a></p><li><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;">1. &#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li><ul><li><a href="#&#x6761;&#x4EF6;&#x65AD;&#x70B9;&#x8BBE;&#x7F6E;">1.1. &#x6761;&#x4EF6;&#x65AD;&#x70B9;&#x8BBE;&#x7F6E;</a></li><li><a href="#&#x53C2;&#x8003;">1.2. &#x53C2;&#x8003;</a></li></ul></ul></div><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -2620,7 +2679,7 @@ clear list.c:12           //&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF1A;&#x884C;&#x5
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"GDB","level":"1.5.5","depth":2,"next":{"title":"Beyond Compare","level":"1.5.6","depth":2,"path":"Linux/beyondcompare.md","ref":"Linux/beyondcompare.md","articles":[]},"previous":{"title":"Tcpdump","level":"1.5.4","depth":2,"path":"Linux/tcpdump.md","ref":"Linux/tcpdump.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","splitter","sitemap","simple-page-toc","navigator"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"https://hxer.github.io"},"navigator":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"janes","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Wiki | janes","language":"cn","gitbook":">= 3.2.0","description":"janes' note"},"file":{"path":"Linux/gdb.md","mtime":"2017-06-28T09:17:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-21T12:12:44.934Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GDB","level":"1.5.5","depth":2,"next":{"title":"Beyond Compare","level":"1.5.6","depth":2,"path":"Linux/beyondcompare.md","ref":"Linux/beyondcompare.md","articles":[]},"previous":{"title":"Tcpdump","level":"1.5.4","depth":2,"path":"Linux/tcpdump.md","ref":"Linux/tcpdump.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","splitter","sitemap","simple-page-toc","navigator"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"https://hxer.github.io"},"navigator":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"janes","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Wiki | janes","language":"cn","gitbook":">= 3.2.0","description":"janes' note"},"file":{"path":"Linux/gdb.md","mtime":"2017-09-26T08:13:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-26T08:23:24.557Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
